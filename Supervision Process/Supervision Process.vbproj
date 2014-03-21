@@ -66,10 +66,10 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Dialog1.Designer.vb">
-      <DependentUpon>Dialog1.vb</DependentUpon>
+    <Compile Include="addPerson.Designer.vb">
+      <DependentUpon>addPerson.vb</DependentUpon>
     </Compile>
-    <Compile Include="Dialog1.vb">
+    <Compile Include="addPerson.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="QueryForm.vb">
@@ -108,8 +108,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Dialog1.resx">
-      <DependentUpon>Dialog1.vb</DependentUpon>
+    <EmbeddedResource Include="addPerson.resx">
+      <DependentUpon>addPerson.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="QueryForm.resx">
       <DependentUpon>QueryForm.vb</DependentUpon>

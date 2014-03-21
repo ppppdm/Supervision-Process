@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class addPerson
+Partial Class AddPerson
     Inherits System.Windows.Forms.Form
 
     'Form 重写 Dispose，以清理组件列表。

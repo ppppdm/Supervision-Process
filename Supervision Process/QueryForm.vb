@@ -1,7 +1,7 @@
 ﻿Imports System.Data.SqlClient
 
 Public Class QueryForm
-    Private Sub QueryForm(ByVal sender As Object, ByVal e As EventArgs) _
+    Private Sub QueryForm_load(ByVal sender As Object, ByVal e As EventArgs) _
         Handles Me.Load
         DataGridView1.ColumnCount = 4
         DataGridView1.Columns(0).HeaderText = "名称"
@@ -13,7 +13,7 @@ Public Class QueryForm
         (ByVal sender As Object, ByVal e As EventArgs) _
         Handles SendInToolStripMenuItem.Click
         'open tape send in windows/dialog
-        tape_send.Show()
+        TapeSend.Show()
     End Sub
 
     Private Sub SendOutToolStripMenuItem_Click _

@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class tape_send
+Partial Class TapeSend
     Inherits System.Windows.Forms.Form
 
     'Form 重写 Dispose，以清理组件列表。
@@ -34,7 +34,7 @@ Partial Class tape_send
         Me.Label5 = New System.Windows.Forms.Label
         Me.Label6 = New System.Windows.Forms.Label
         Me.Button1 = New System.Windows.Forms.Button
-        Me.Button2 = New System.Windows.Forms.Button
+        Me.Cancel_Button = New System.Windows.Forms.Button
         Me.CheckBoxTape = New System.Windows.Forms.CheckBox
         Me.Label4 = New System.Windows.Forms.Label
         Me.Label7 = New System.Windows.Forms.Label
@@ -140,14 +140,14 @@ Partial Class tape_send
         Me.Button1.Text = "确认收带"
         Me.Button1.UseVisualStyleBackColor = True
         '
-        'Button2
+        'Cancel_Button
         '
-        Me.Button2.Location = New System.Drawing.Point(406, 341)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 23)
-        Me.Button2.TabIndex = 13
-        Me.Button2.Text = "取消"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.Cancel_Button.Location = New System.Drawing.Point(406, 341)
+        Me.Cancel_Button.Name = "Cancel_Button"
+        Me.Cancel_Button.Size = New System.Drawing.Size(75, 23)
+        Me.Cancel_Button.TabIndex = 13
+        Me.Cancel_Button.Text = "取消"
+        Me.Cancel_Button.UseVisualStyleBackColor = True
         '
         'CheckBoxTape
         '
@@ -221,7 +221,7 @@ Partial Class tape_send
         Me.Controls.Add(Me.TextBoxRemark)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.CheckBoxTape)
-        Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(Me.Cancel_Button)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label5)
@@ -235,7 +235,7 @@ Partial Class tape_send
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
-        Me.Name = "tape_send"
+        Me.Name = "TapeSend"
         Me.Text = "送带"
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -253,7 +253,7 @@ Partial Class tape_send
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents Label6 As System.Windows.Forms.Label
     Friend WithEvents Button1 As System.Windows.Forms.Button
-    Friend WithEvents Button2 As System.Windows.Forms.Button
+    Friend WithEvents Cancel_Button As System.Windows.Forms.Button
     Friend WithEvents CheckBoxTape As System.Windows.Forms.CheckBox
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents Label7 As System.Windows.Forms.Label
