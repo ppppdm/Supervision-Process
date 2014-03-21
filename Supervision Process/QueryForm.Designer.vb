@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Form1
+Partial Class QueryForm
     Inherits System.Windows.Forms.Form
 
     'Form 重写 Dispose，以清理组件列表。
@@ -24,12 +24,12 @@ Partial Class Form1
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip
-        Me.送带ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.发带ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.设置ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.选项ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.人员添加ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem
-        Me.Button1 = New System.Windows.Forms.Button
+        Me.SendInToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
+        Me.SendOutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
+        Me.SettingToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
+        Me.OptionsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
+        Me.AddPeopleToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem
+        Me.ButtonQuery = New System.Windows.Forms.Button
         Me.TextBox1 = New System.Windows.Forms.TextBox
         Me.Label1 = New System.Windows.Forms.Label
         Me.GroupBox1 = New System.Windows.Forms.GroupBox
@@ -39,9 +39,9 @@ Partial Class Form1
         Me.PanelResult = New System.Windows.Forms.Panel
         Me.DataGridView1 = New System.Windows.Forms.DataGridView
         Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
-        Me.采集ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.审核ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.回迁审核ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
+        Me.UploadToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
+        Me.CheckUpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
+        Me.BackCheckToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
         Me.MenuStrip1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.PanelQuery.SuspendLayout()
@@ -52,52 +52,52 @@ Partial Class Form1
         '
         'MenuStrip1
         '
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.送带ToolStripMenuItem, Me.发带ToolStripMenuItem, Me.设置ToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SendInToolStripMenuItem, Me.SendOutToolStripMenuItem, Me.SettingToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(984, 25)
         Me.MenuStrip1.TabIndex = 0
         Me.MenuStrip1.Text = "MenuStrip1"
         '
-        '送带ToolStripMenuItem
+        'SendInToolStripMenuItem
         '
-        Me.送带ToolStripMenuItem.Name = "送带ToolStripMenuItem"
-        Me.送带ToolStripMenuItem.Size = New System.Drawing.Size(44, 21)
-        Me.送带ToolStripMenuItem.Text = "送带"
+        Me.SendInToolStripMenuItem.Name = "SendInToolStripMenuItem"
+        Me.SendInToolStripMenuItem.Size = New System.Drawing.Size(44, 21)
+        Me.SendInToolStripMenuItem.Text = "送带"
         '
-        '发带ToolStripMenuItem
+        'SendOutToolStripMenuItem
         '
-        Me.发带ToolStripMenuItem.Name = "发带ToolStripMenuItem"
-        Me.发带ToolStripMenuItem.Size = New System.Drawing.Size(44, 21)
-        Me.发带ToolStripMenuItem.Text = "发带"
+        Me.SendOutToolStripMenuItem.Name = "SendOutToolStripMenuItem"
+        Me.SendOutToolStripMenuItem.Size = New System.Drawing.Size(44, 21)
+        Me.SendOutToolStripMenuItem.Text = "发带"
         '
-        '设置ToolStripMenuItem
+        'SettingToolStripMenuItem
         '
-        Me.设置ToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.选项ToolStripMenuItem, Me.人员添加ToolStripMenuItem1})
-        Me.设置ToolStripMenuItem.Name = "设置ToolStripMenuItem"
-        Me.设置ToolStripMenuItem.Size = New System.Drawing.Size(44, 21)
-        Me.设置ToolStripMenuItem.Text = "设置"
+        Me.SettingToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.OptionsToolStripMenuItem, Me.AddPeopleToolStripMenuItem1})
+        Me.SettingToolStripMenuItem.Name = "SettingToolStripMenuItem"
+        Me.SettingToolStripMenuItem.Size = New System.Drawing.Size(44, 21)
+        Me.SettingToolStripMenuItem.Text = "设置"
         '
-        '选项ToolStripMenuItem
+        'OptionsToolStripMenuItem
         '
-        Me.选项ToolStripMenuItem.Name = "选项ToolStripMenuItem"
-        Me.选项ToolStripMenuItem.Size = New System.Drawing.Size(124, 22)
-        Me.选项ToolStripMenuItem.Text = "选项..."
+        Me.OptionsToolStripMenuItem.Name = "OptionsToolStripMenuItem"
+        Me.OptionsToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.OptionsToolStripMenuItem.Text = "选项..."
         '
-        '人员添加ToolStripMenuItem1
+        'AddPeopleToolStripMenuItem1
         '
-        Me.人员添加ToolStripMenuItem1.Name = "人员添加ToolStripMenuItem1"
-        Me.人员添加ToolStripMenuItem1.Size = New System.Drawing.Size(124, 22)
-        Me.人员添加ToolStripMenuItem1.Text = "人员添加"
+        Me.AddPeopleToolStripMenuItem1.Name = "AddPeopleToolStripMenuItem1"
+        Me.AddPeopleToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
+        Me.AddPeopleToolStripMenuItem1.Text = "人员添加"
         '
-        'Button1
+        'ButtonQuery
         '
-        Me.Button1.Location = New System.Drawing.Point(25, 69)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 1
-        Me.Button1.Text = "查询"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.ButtonQuery.Location = New System.Drawing.Point(25, 69)
+        Me.ButtonQuery.Name = "ButtonQuery"
+        Me.ButtonQuery.Size = New System.Drawing.Size(75, 23)
+        Me.ButtonQuery.TabIndex = 1
+        Me.ButtonQuery.Text = "查询"
+        Me.ButtonQuery.UseVisualStyleBackColor = True
         '
         'TextBox1
         '
@@ -154,7 +154,7 @@ Partial Class Form1
         Me.PanelQuery.Controls.Add(Me.TextBox1)
         Me.PanelQuery.Controls.Add(Me.GroupBox1)
         Me.PanelQuery.Controls.Add(Me.Label1)
-        Me.PanelQuery.Controls.Add(Me.Button1)
+        Me.PanelQuery.Controls.Add(Me.ButtonQuery)
         Me.PanelQuery.Location = New System.Drawing.Point(12, 25)
         Me.PanelQuery.Name = "PanelQuery"
         Me.PanelQuery.Size = New System.Drawing.Size(176, 320)
@@ -193,29 +193,29 @@ Partial Class Form1
         '
         'ContextMenuStrip1
         '
-        Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.采集ToolStripMenuItem, Me.审核ToolStripMenuItem, Me.回迁审核ToolStripMenuItem})
+        Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.UploadToolStripMenuItem, Me.CheckUpToolStripMenuItem, Me.BackCheckToolStripMenuItem})
         Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
-        Me.ContextMenuStrip1.Size = New System.Drawing.Size(125, 70)
+        Me.ContextMenuStrip1.Size = New System.Drawing.Size(153, 92)
         '
-        '采集ToolStripMenuItem
+        'UploadToolStripMenuItem
         '
-        Me.采集ToolStripMenuItem.Name = "采集ToolStripMenuItem"
-        Me.采集ToolStripMenuItem.Size = New System.Drawing.Size(124, 22)
-        Me.采集ToolStripMenuItem.Text = "采集"
+        Me.UploadToolStripMenuItem.Name = "UploadToolStripMenuItem"
+        Me.UploadToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.UploadToolStripMenuItem.Text = "采集"
         '
-        '审核ToolStripMenuItem
+        'CheckUpToolStripMenuItem
         '
-        Me.审核ToolStripMenuItem.Name = "审核ToolStripMenuItem"
-        Me.审核ToolStripMenuItem.Size = New System.Drawing.Size(124, 22)
-        Me.审核ToolStripMenuItem.Text = "审核"
+        Me.CheckUpToolStripMenuItem.Name = "CheckUpToolStripMenuItem"
+        Me.CheckUpToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.CheckUpToolStripMenuItem.Text = "审核"
         '
-        '回迁审核ToolStripMenuItem
+        'BackCheckToolStripMenuItem
         '
-        Me.回迁审核ToolStripMenuItem.Name = "回迁审核ToolStripMenuItem"
-        Me.回迁审核ToolStripMenuItem.Size = New System.Drawing.Size(124, 22)
-        Me.回迁审核ToolStripMenuItem.Text = "回迁审核"
+        Me.BackCheckToolStripMenuItem.Name = "BackCheckToolStripMenuItem"
+        Me.BackCheckToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.BackCheckToolStripMenuItem.Text = "回迁审核"
         '
-        'Form1
+        'QueryForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -224,7 +224,7 @@ Partial Class Form1
         Me.Controls.Add(Me.PanelQuery)
         Me.Controls.Add(Me.MenuStrip1)
         Me.MainMenuStrip = Me.MenuStrip1
-        Me.Name = "Form1"
+        Me.Name = "QueryForm"
         Me.Text = "监理流程"
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
@@ -240,10 +240,10 @@ Partial Class Form1
 
     End Sub
     Friend WithEvents MenuStrip1 As System.Windows.Forms.MenuStrip
-    Friend WithEvents 送带ToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents 发带ToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents 设置ToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents SendInToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents SendOutToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents SettingToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ButtonQuery As System.Windows.Forms.Button
     Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
@@ -252,11 +252,11 @@ Partial Class Form1
     Friend WithEvents PanelQuery As System.Windows.Forms.Panel
     Friend WithEvents PanelResult As System.Windows.Forms.Panel
     Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
-    Friend WithEvents 选项ToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents 人员添加ToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents OptionsToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents AddPeopleToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ContextMenuStrip1 As System.Windows.Forms.ContextMenuStrip
-    Friend WithEvents 采集ToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents 审核ToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents 回迁审核ToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents UploadToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents CheckUpToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents BackCheckToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 
 End Class

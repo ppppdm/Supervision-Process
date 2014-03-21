@@ -1,8 +1,7 @@
 ﻿Imports System.Data.SqlClient
+
 Public Class tape_send
-
     Private Sub tape_send_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-
     End Sub
 
     Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
@@ -32,8 +31,8 @@ Public Class tape_send
             MsgBox("!")
         ElseIf length = "" Then
             MsgBox("!")
-        ElseIf in_bc_time = "" Then
-            MsgBox("!")
+            'ElseIf in_bc_time = "" Then
+            '    MsgBox("!")
         ElseIf in_bc_send_per = "" Then
             MsgBox("!")
         ElseIf in_bc_recv_per = "" Then
@@ -49,11 +48,25 @@ Public Class tape_send
             Try
                 connection.Open()
 
-                Dim queryString As String = "insert into tape(tape_name,start_timecode,end_timecode,length,in_bc_time,in_bc_send_per,in_bc_recv_per,identical) values (tape_name,start_timecode,end_timecode,length,in_bc_time,in_bc_send_per,in_bc_recv_per,identical);"
+                Dim paras() As SqlParameter = _
+                        {New SqlParameter("@tape_name", tape_name), New SqlParameter("@start_timecode", start_timecode), _
+                         New SqlParameter("@end_timecode", end_timecode), New SqlParameter("@length", length), _
+                         New SqlParameter("@in_bc_send_per", in_bc_send_per), _
+                         New SqlParameter("@in_bc_recv_per", in_bc_recv_per), New SqlParameter("@identical", identical), _
+                         New SqlParameter("@remark", remark), New SqlParameter("@tape_status", 1)}
+
+                '
+                Dim queryString As String = _
+                        "insert into tape(tape_name,start_timecode,end_timecode,length,in_bc_send_per,in_bc_recv_per,identical,remark,tape_status, in_bc_time) values (@tape_name,@start_timecode,@end_timecode,@length,@in_bc_send_per,@in_bc_recv_per,@identical,@remark,@tape_status, getdate());"
                 'Debug
                 Console.WriteLine(queryString)
 
                 Dim command As New SqlCommand(queryString, connection)
+                command.Parameters.AddRange(paras)
+
+                Console.WriteLine(command.CommandText)
+
+                'cmd.Parameters.AddRange(paras);
                 Dim reader As SqlDataReader = command.ExecuteReader()
             Catch ex As Exception
                 MsgBox("数据库连接失败!")
@@ -62,5 +75,4 @@ Public Class tape_send
             End Try
         End If
     End Sub
-
 End Class
