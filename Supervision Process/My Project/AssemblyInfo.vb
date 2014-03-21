@@ -1,24 +1,24 @@
-﻿Imports System
-Imports System.Reflection
-Imports System.Runtime.InteropServices
+﻿
 
 ' 有关程序集的常规信息通过下列属性集
 ' 控制。更改这些属性值可修改
 ' 与程序集关联的信息。
 
 ' 查看程序集属性的值
+Imports System.Reflection
+Imports System.Runtime.InteropServices
 
-<Assembly: AssemblyTitle("Supervision Process")> 
-<Assembly: AssemblyDescription("")> 
-<Assembly: AssemblyCompany("")> 
-<Assembly: AssemblyProduct("Supervision Process")> 
-<Assembly: AssemblyCopyright("Copyright ©  2014")> 
-<Assembly: AssemblyTrademark("")> 
+<Assembly: AssemblyTitle("Supervision Process")>
+<Assembly: AssemblyDescription("")>
+<Assembly: AssemblyCompany("")>
+<Assembly: AssemblyProduct("Supervision Process")>
+<Assembly: AssemblyCopyright("Copyright ©  2014")>
+<Assembly: AssemblyTrademark("")>
 
 <Assembly: ComVisible(False)>
 
 '如果此项目向 COM 公开，则下列 GUID 用于类型库的 ID
-<Assembly: Guid("e8f037e8-0766-42fa-a452-65fc022a1360")> 
+<Assembly: Guid("e8f037e8-0766-42fa-a452-65fc022a1360")>
 
 ' 程序集的版本信息由下面四个值组成:
 '
@@ -31,5 +31,5 @@ Imports System.Runtime.InteropServices
 ' 方法是按如下所示使用“*”:
 ' <Assembly: AssemblyVersion("1.0.*")> 
 
-<Assembly: AssemblyVersion("1.0.0.0")> 
-<Assembly: AssemblyFileVersion("1.0.0.0")> 
+<Assembly: AssemblyVersion("1.0.0.0")>
+<Assembly: AssemblyFileVersion("1.0.0.0")>

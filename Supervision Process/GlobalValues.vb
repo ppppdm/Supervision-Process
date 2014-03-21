@@ -1,15 +1,26 @@
 ﻿Module GlobalValues
-
     Public Xuhao As Integer '用来表征项目的序号
-    Public Declare Function CreateWnd Lib "MyDll" () As Double
-    Public Declare Function ClearGraphs Lib "MyDll" () As Double
-    Public Declare Function OnpStillCapture Lib "MyDll" (ByVal hwnd As Long) As Double
-    Public Declare Function InitStillGraph Lib "MyDll" (ByVal hwnd As Long) As Double
-    Public Declare Function CloseWnd Lib "MyDll" () As Double
-    Public Declare Function CapDlgToFile Lib "MyDll" (ByVal source_hwnd As Long, ByVal picture_hwnd As Long, ByVal thirds As Long) As Long
-    Public Declare Function CapDlgTest Lib "MyDll" (ByVal a As Long, ByVal b As Long) As Integer
-    Public Declare Function LoadBmpFileToStatic Lib "MyDll" (ByVal a As Long, ByVal b As Long, ByVal c As Long, ByVal d As Long, ByVal e As Long) As Integer
-    Public Declare Function EncBmpToJpg Lib "MyDll" (ByVal filename_bmp As String, ByVal filename_jpg As String) As Integer
+    Public Declare Function CreateWnd Lib "MyDll"() As Double
+    Public Declare Function ClearGraphs Lib "MyDll"() As Double
+    Public Declare Function OnpStillCapture Lib "MyDll"(ByVal hwnd As Long) _
+        As Double
+    Public Declare Function InitStillGraph Lib "MyDll"(ByVal hwnd As Long) _
+        As Double
+    Public Declare Function CloseWnd Lib "MyDll"() As Double
+    Public Declare Function CapDlgToFile Lib "MyDll" _
+        (ByVal source_hwnd As Long, _
+         ByVal picture_hwnd As Long, _
+         ByVal thirds As Long) As Long
+    Public Declare Function CapDlgTest Lib "MyDll" _
+        (ByVal a As Long, ByVal b As Long) As Integer
+    Public Declare Function LoadBmpFileToStatic Lib "MyDll" _
+        (ByVal a As Long, _
+         ByVal b As Long, _
+         ByVal c As Long, _
+         ByVal d As Long, _
+         ByVal e As Long) As Integer
+    Public Declare Function EncBmpToJpg Lib "MyDll" _
+        (ByVal filename_bmp As String, ByVal filename_jpg As String) As Integer
 
     'Public Declare Sub Sleep Lib "kernel32" Alias "Sleep" (ByVal dwMilliseconds As Long)
     'Public ppid As Integer '用来表征项目编号，唯一标识
@@ -24,12 +35,26 @@
     'Public lookflag = 1  '用来表征回看项目到哪一步了，默认为1，在第一步
 
 
-    Public piclocation = "D:\MyBackup\我的文档\Visual Studio 2008\Projects\上载管理\WindowsApplication1\bin\Debug\warning.png"
-    Public cutscrjpg = "D:\MyBackup\我的文档\Visual Studio 2008\Projects\上载管理\WindowsApplication1\bin\Debug\cutscr.jpg"
-    Public cutbmp = "D:\MyBackup\我的文档\Visual Studio 2008\Projects\上载管理\WindowsApplication1\bin\Debug\StillCap0000.bmp"
-    Public cutscrbmp = "D:\MyBackup\我的文档\Visual Studio 2008\Projects\上载管理\WindowsApplication1\bin\Debug\CapDLG0000.bmp"
-    Public cutjpg = "D:\MyBackup\我的文档\Visual Studio 2008\Projects\上载管理\WindowsApplication1\bin\Debug\cutvideo.jpg"
+    Public _
+        piclocation = _
+            "D:\MyBackup\我的文档\Visual Studio 2008\Projects\上载管理\WindowsApplication1\bin\Debug\warning.png"
 
-    Public connstr = "Server=localhost;Database=nntv_ps;User ID=sa;Password=12345;"
+    Public _
+        cutscrjpg = _
+            "D:\MyBackup\我的文档\Visual Studio 2008\Projects\上载管理\WindowsApplication1\bin\Debug\cutscr.jpg"
 
+    Public _
+        cutbmp = _
+            "D:\MyBackup\我的文档\Visual Studio 2008\Projects\上载管理\WindowsApplication1\bin\Debug\StillCap0000.bmp"
+
+    Public _
+        cutscrbmp = _
+            "D:\MyBackup\我的文档\Visual Studio 2008\Projects\上载管理\WindowsApplication1\bin\Debug\CapDLG0000.bmp"
+
+    Public _
+        cutjpg = _
+            "D:\MyBackup\我的文档\Visual Studio 2008\Projects\上载管理\WindowsApplication1\bin\Debug\cutvideo.jpg"
+
+    Public _
+        connstr = "Server=localhost;Database=nntv_ps;User ID=sa;Password=12345;"
 End Module

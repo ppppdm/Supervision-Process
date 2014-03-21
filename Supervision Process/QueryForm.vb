@@ -89,7 +89,9 @@ Public Class QueryForm
         Handles DataGridView1.RowDividerDoubleClick
     End Sub
 
-    Private Sub UploadToolStripMenuItem_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles UploadToolStripMenuItem.Click
+    Private Sub UploadToolStripMenuItem_Click _
+        (ByVal sender As Object, ByVal e As EventArgs) _
+        Handles UploadToolStripMenuItem.Click
         UpLoadForm.Show()
     End Sub
 End Class
