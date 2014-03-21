@@ -72,6 +72,7 @@
     <Compile Include="addPerson.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="GlobalValues.vb" />
     <Compile Include="QueryForm.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -100,10 +101,16 @@
     <Compile Include="Setting.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="tape_send.Designer.vb">
-      <DependentUpon>tape_send.vb</DependentUpon>
+    <Compile Include="TapeSend.Designer.vb">
+      <DependentUpon>TapeSend.vb</DependentUpon>
     </Compile>
-    <Compile Include="tape_send.vb">
+    <Compile Include="TapeSend.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpLoadForm.Designer.vb">
+      <DependentUpon>UpLoadForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UpLoadForm.vb">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
@@ -123,8 +130,12 @@
     <EmbeddedResource Include="Setting.resx">
       <DependentUpon>Setting.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="tape_send.resx">
-      <DependentUpon>tape_send.vb</DependentUpon>
+    <EmbeddedResource Include="TapeSend.resx">
+      <DependentUpon>TapeSend.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpLoadForm.resx">
+      <DependentUpon>UpLoadForm.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -137,6 +148,16 @@
       <CustomToolNamespace>My</CustomToolNamespace>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="ADODB">
+      <Guid>{EF53050B-882E-4776-B643-EDA472E8E3F2}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>7</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
