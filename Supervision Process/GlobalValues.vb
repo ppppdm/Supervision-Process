@@ -67,4 +67,23 @@
     Public DbPawd As String = "nntv@2014"
     Public Conn As String = "Server=" & DbServer & ";Database=" & DbDataBase & _
     ";User ID=" & DbUser & ";Password=" & DbPawd & ";"
+
+    '高级查询选项启用 Ao = advanced options
+    Public AoNotUpdate As Boolean = True
+    Public AoNotCheckUp As Boolean = True
+    Public AoHadCheckUp As Boolean = False
+    Public AoDateAndTime As Boolean = True
+
+    '查询内容显示设置 Swo = show options
+    Public SwoTapeName = True ' not modify
+    Public SwoTapeStatus = True ' not modify
+
+    Public SwoTapeLength = True
+    Public SwoTapeSendInTime = True
+    Public SwoTapeSendInSendPer = False
+    Public SwoTapeSendInRecvPer = False
+    Public SwoTapeSendOutTime = True
+    Public SwoTapeSendOutSendPer = False
+    Public SwoTapeSendOutRecvPer = False
+
 End Module

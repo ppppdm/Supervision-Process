@@ -3,6 +3,8 @@
 Public Class QueryForm
     Private Sub QueryForm_load(ByVal sender As Object, ByVal e As EventArgs) _
         Handles Me.Load
+        'init
+        InitGlobalVariables()
 
         '加载QueryForm时的初始化工作
         '初始化DataGridView
@@ -99,4 +101,40 @@ Public Class QueryForm
         Handles UploadToolStripMenuItem.Click
         UpLoadForm.Show()
     End Sub
+
+    Private Sub InitGlobalVariables()
+        '打开并读取配置文件config.ini
+        Console.WriteLine(My.Computer.FileSystem.CurrentDirectory)
+        Try
+            Dim reader = New Microsoft.VisualBasic.FileIO.TextFieldParser(ConfigFile)
+            reader.TextFieldType = FileIO.FieldType.Delimited
+            reader.SetDelimiters(",")
+
+            Dim currentRow As String()
+            '初始化DSN
+            Try
+                currentRow = reader.ReadFields()
+
+                DbServer = currentRow(0)
+                DbDataBase = currentRow(1)
+                DbUser = currentRow(2)
+                DbPawd = currentRow(3)
+
+                Conn = "Server=" & DbServer & ";Database=" & DbDataBase & _
+                ";User ID=" & DbUser & ";Password=" & DbPawd & ";"
+                Console.WriteLine(Conn)
+
+            Catch ex As  _
+            Microsoft.VisualBasic.FileIO.MalformedLineException
+                Console.WriteLine("Line " & ex.Message & _
+                "is not valid and will be skipped.")
+            End Try
+
+            '初始化本体自定义设置
+
+        Catch err As Exception
+            Console.WriteLine(err.Message)
+        End Try
+    End Sub
+
 End Class

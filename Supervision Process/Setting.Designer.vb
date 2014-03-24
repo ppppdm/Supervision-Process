@@ -37,20 +37,38 @@ Partial Class Setting
         Me.Label2 = New System.Windows.Forms.Label
         Me.Label1 = New System.Windows.Forms.Label
         Me.TabPage2 = New System.Windows.Forms.TabPage
+        Me.Label8 = New System.Windows.Forms.Label
+        Me.TrackBar1 = New System.Windows.Forms.TrackBar
+        Me.TextBox7 = New System.Windows.Forms.TextBox
+        Me.TextBox6 = New System.Windows.Forms.TextBox
+        Me.TextBox5 = New System.Windows.Forms.TextBox
         Me.Label7 = New System.Windows.Forms.Label
         Me.Label6 = New System.Windows.Forms.Label
         Me.Label5 = New System.Windows.Forms.Label
-        Me.TextBox5 = New System.Windows.Forms.TextBox
-        Me.TextBox6 = New System.Windows.Forms.TextBox
-        Me.TextBox7 = New System.Windows.Forms.TextBox
-        Me.TrackBar1 = New System.Windows.Forms.TrackBar
-        Me.Label8 = New System.Windows.Forms.Label
         Me.TabPage3 = New System.Windows.Forms.TabPage
+        Me.TabPage4 = New System.Windows.Forms.TabPage
+        Me.Label9 = New System.Windows.Forms.Label
+        Me.CheckBox1 = New System.Windows.Forms.CheckBox
+        Me.CheckBox2 = New System.Windows.Forms.CheckBox
+        Me.CheckBox3 = New System.Windows.Forms.CheckBox
+        Me.CheckBox4 = New System.Windows.Forms.CheckBox
+        Me.CheckBox5 = New System.Windows.Forms.CheckBox
+        Me.CheckBox6 = New System.Windows.Forms.CheckBox
+        Me.CheckBox7 = New System.Windows.Forms.CheckBox
+        Me.Label10 = New System.Windows.Forms.Label
+        Me.CheckBox8 = New System.Windows.Forms.CheckBox
+        Me.CheckBox9 = New System.Windows.Forms.CheckBox
+        Me.CheckBox10 = New System.Windows.Forms.CheckBox
+        Me.CheckBox11 = New System.Windows.Forms.CheckBox
+        Me.CheckBox12 = New System.Windows.Forms.CheckBox
+        Me.CheckBox13 = New System.Windows.Forms.CheckBox
         Me.TableLayoutPanel1.SuspendLayout()
         Me.tabsetting.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
         CType(Me.TrackBar1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TabPage3.SuspendLayout()
+        Me.TabPage4.SuspendLayout()
         Me.SuspendLayout()
         '
         'TableLayoutPanel1
@@ -92,6 +110,7 @@ Partial Class Setting
         Me.tabsetting.Controls.Add(Me.TabPage1)
         Me.tabsetting.Controls.Add(Me.TabPage2)
         Me.tabsetting.Controls.Add(Me.TabPage3)
+        Me.tabsetting.Controls.Add(Me.TabPage4)
         Me.tabsetting.Location = New System.Drawing.Point(12, 12)
         Me.tabsetting.Name = "tabsetting"
         Me.tabsetting.SelectedIndex = 0
@@ -208,6 +227,47 @@ Partial Class Setting
         Me.TabPage2.Text = "审核点"
         Me.TabPage2.UseVisualStyleBackColor = True
         '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Location = New System.Drawing.Point(160, 212)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(41, 12)
+        Me.Label8.TabIndex = 7
+        Me.Label8.Text = "Label8"
+        '
+        'TrackBar1
+        '
+        Me.TrackBar1.BackColor = System.Drawing.Color.White
+        Me.TrackBar1.LargeChange = 30
+        Me.TrackBar1.Location = New System.Drawing.Point(23, 201)
+        Me.TrackBar1.Maximum = 100
+        Me.TrackBar1.Name = "TrackBar1"
+        Me.TrackBar1.Size = New System.Drawing.Size(104, 45)
+        Me.TrackBar1.TabIndex = 6
+        Me.TrackBar1.TickFrequency = 10
+        '
+        'TextBox7
+        '
+        Me.TextBox7.Location = New System.Drawing.Point(199, 146)
+        Me.TextBox7.Name = "TextBox7"
+        Me.TextBox7.Size = New System.Drawing.Size(100, 21)
+        Me.TextBox7.TabIndex = 5
+        '
+        'TextBox6
+        '
+        Me.TextBox6.Location = New System.Drawing.Point(199, 94)
+        Me.TextBox6.Name = "TextBox6"
+        Me.TextBox6.Size = New System.Drawing.Size(100, 21)
+        Me.TextBox6.TabIndex = 4
+        '
+        'TextBox5
+        '
+        Me.TextBox5.Location = New System.Drawing.Point(199, 40)
+        Me.TextBox5.Name = "TextBox5"
+        Me.TextBox5.Size = New System.Drawing.Size(100, 21)
+        Me.TextBox5.TabIndex = 3
+        '
         'Label7
         '
         Me.Label7.AutoSize = True
@@ -235,56 +295,188 @@ Partial Class Setting
         Me.Label5.TabIndex = 0
         Me.Label5.Text = "第一个审核点的时码范围"
         '
-        'TextBox5
-        '
-        Me.TextBox5.Location = New System.Drawing.Point(199, 40)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(100, 21)
-        Me.TextBox5.TabIndex = 3
-        '
-        'TextBox6
-        '
-        Me.TextBox6.Location = New System.Drawing.Point(199, 94)
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(100, 21)
-        Me.TextBox6.TabIndex = 4
-        '
-        'TextBox7
-        '
-        Me.TextBox7.Location = New System.Drawing.Point(199, 146)
-        Me.TextBox7.Name = "TextBox7"
-        Me.TextBox7.Size = New System.Drawing.Size(100, 21)
-        Me.TextBox7.TabIndex = 5
-        '
-        'TrackBar1
-        '
-        Me.TrackBar1.BackColor = System.Drawing.Color.White
-        Me.TrackBar1.LargeChange = 30
-        Me.TrackBar1.Location = New System.Drawing.Point(23, 201)
-        Me.TrackBar1.Maximum = 100
-        Me.TrackBar1.Name = "TrackBar1"
-        Me.TrackBar1.Size = New System.Drawing.Size(104, 45)
-        Me.TrackBar1.TabIndex = 6
-        Me.TrackBar1.TickFrequency = 10
-        '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(160, 212)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(41, 12)
-        Me.Label8.TabIndex = 7
-        Me.Label8.Text = "Label8"
-        '
         'TabPage3
         '
+        Me.TabPage3.Controls.Add(Me.CheckBox12)
+        Me.TabPage3.Controls.Add(Me.CheckBox13)
+        Me.TabPage3.Controls.Add(Me.CheckBox10)
+        Me.TabPage3.Controls.Add(Me.CheckBox11)
+        Me.TabPage3.Controls.Add(Me.CheckBox9)
+        Me.TabPage3.Controls.Add(Me.CheckBox8)
+        Me.TabPage3.Controls.Add(Me.Label10)
         Me.TabPage3.Location = New System.Drawing.Point(4, 22)
         Me.TabPage3.Name = "TabPage3"
         Me.TabPage3.Padding = New System.Windows.Forms.Padding(3)
         Me.TabPage3.Size = New System.Drawing.Size(571, 304)
         Me.TabPage3.TabIndex = 2
-        Me.TabPage3.Text = "查询"
+        Me.TabPage3.Text = "查询高级选项"
         Me.TabPage3.UseVisualStyleBackColor = True
+        '
+        'TabPage4
+        '
+        Me.TabPage4.Controls.Add(Me.CheckBox5)
+        Me.TabPage4.Controls.Add(Me.CheckBox6)
+        Me.TabPage4.Controls.Add(Me.CheckBox7)
+        Me.TabPage4.Controls.Add(Me.CheckBox4)
+        Me.TabPage4.Controls.Add(Me.CheckBox3)
+        Me.TabPage4.Controls.Add(Me.CheckBox2)
+        Me.TabPage4.Controls.Add(Me.CheckBox1)
+        Me.TabPage4.Controls.Add(Me.Label9)
+        Me.TabPage4.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage4.Name = "TabPage4"
+        Me.TabPage4.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage4.Size = New System.Drawing.Size(571, 304)
+        Me.TabPage4.TabIndex = 3
+        Me.TabPage4.Text = "查询显示设置"
+        Me.TabPage4.UseVisualStyleBackColor = True
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Location = New System.Drawing.Point(29, 28)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(113, 12)
+        Me.Label9.TabIndex = 0
+        Me.Label9.Text = "选择查询要显示的列"
+        '
+        'CheckBox1
+        '
+        Me.CheckBox1.AutoSize = True
+        Me.CheckBox1.Location = New System.Drawing.Point(31, 59)
+        Me.CheckBox1.Name = "CheckBox1"
+        Me.CheckBox1.Size = New System.Drawing.Size(48, 16)
+        Me.CheckBox1.TabIndex = 1
+        Me.CheckBox1.Text = "时长"
+        Me.CheckBox1.UseVisualStyleBackColor = True
+        '
+        'CheckBox2
+        '
+        Me.CheckBox2.AutoSize = True
+        Me.CheckBox2.Location = New System.Drawing.Point(31, 91)
+        Me.CheckBox2.Name = "CheckBox2"
+        Me.CheckBox2.Size = New System.Drawing.Size(72, 16)
+        Me.CheckBox2.TabIndex = 2
+        Me.CheckBox2.Text = "送带时间"
+        Me.CheckBox2.UseVisualStyleBackColor = True
+        '
+        'CheckBox3
+        '
+        Me.CheckBox3.AutoSize = True
+        Me.CheckBox3.Location = New System.Drawing.Point(31, 123)
+        Me.CheckBox3.Name = "CheckBox3"
+        Me.CheckBox3.Size = New System.Drawing.Size(60, 16)
+        Me.CheckBox3.TabIndex = 3
+        Me.CheckBox3.Text = "送带人"
+        Me.CheckBox3.UseVisualStyleBackColor = True
+        '
+        'CheckBox4
+        '
+        Me.CheckBox4.AutoSize = True
+        Me.CheckBox4.Location = New System.Drawing.Point(31, 157)
+        Me.CheckBox4.Name = "CheckBox4"
+        Me.CheckBox4.Size = New System.Drawing.Size(60, 16)
+        Me.CheckBox4.TabIndex = 4
+        Me.CheckBox4.Text = "接带人"
+        Me.CheckBox4.UseVisualStyleBackColor = True
+        '
+        'CheckBox5
+        '
+        Me.CheckBox5.AutoSize = True
+        Me.CheckBox5.Location = New System.Drawing.Point(31, 266)
+        Me.CheckBox5.Name = "CheckBox5"
+        Me.CheckBox5.Size = New System.Drawing.Size(60, 16)
+        Me.CheckBox5.TabIndex = 7
+        Me.CheckBox5.Text = "收带人"
+        Me.CheckBox5.UseVisualStyleBackColor = True
+        '
+        'CheckBox6
+        '
+        Me.CheckBox6.AutoSize = True
+        Me.CheckBox6.Location = New System.Drawing.Point(31, 230)
+        Me.CheckBox6.Name = "CheckBox6"
+        Me.CheckBox6.Size = New System.Drawing.Size(60, 16)
+        Me.CheckBox6.TabIndex = 6
+        Me.CheckBox6.Text = "发带人"
+        Me.CheckBox6.UseVisualStyleBackColor = True
+        '
+        'CheckBox7
+        '
+        Me.CheckBox7.AutoSize = True
+        Me.CheckBox7.Location = New System.Drawing.Point(31, 194)
+        Me.CheckBox7.Name = "CheckBox7"
+        Me.CheckBox7.Size = New System.Drawing.Size(72, 16)
+        Me.CheckBox7.TabIndex = 5
+        Me.CheckBox7.Text = "发带时间"
+        Me.CheckBox7.UseVisualStyleBackColor = True
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Location = New System.Drawing.Point(38, 28)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(125, 12)
+        Me.Label10.TabIndex = 0
+        Me.Label10.Text = "要启用的高级查询选项"
+        '
+        'CheckBox8
+        '
+        Me.CheckBox8.AutoSize = True
+        Me.CheckBox8.Location = New System.Drawing.Point(40, 69)
+        Me.CheckBox8.Name = "CheckBox8"
+        Me.CheckBox8.Size = New System.Drawing.Size(108, 16)
+        Me.CheckBox8.TabIndex = 1
+        Me.CheckBox8.Text = """未采集""复选框"
+        Me.CheckBox8.UseVisualStyleBackColor = True
+        '
+        'CheckBox9
+        '
+        Me.CheckBox9.AutoSize = True
+        Me.CheckBox9.Location = New System.Drawing.Point(40, 105)
+        Me.CheckBox9.Name = "CheckBox9"
+        Me.CheckBox9.Size = New System.Drawing.Size(108, 16)
+        Me.CheckBox9.TabIndex = 2
+        Me.CheckBox9.Text = """未审核""复选框"
+        Me.CheckBox9.UseVisualStyleBackColor = True
+        '
+        'CheckBox10
+        '
+        Me.CheckBox10.AutoSize = True
+        Me.CheckBox10.Location = New System.Drawing.Point(40, 178)
+        Me.CheckBox10.Name = "CheckBox10"
+        Me.CheckBox10.Size = New System.Drawing.Size(114, 16)
+        Me.CheckBox10.TabIndex = 4
+        Me.CheckBox10.Text = """日期,时间""选择"
+        Me.CheckBox10.UseVisualStyleBackColor = True
+        '
+        'CheckBox11
+        '
+        Me.CheckBox11.AutoSize = True
+        Me.CheckBox11.Location = New System.Drawing.Point(40, 142)
+        Me.CheckBox11.Name = "CheckBox11"
+        Me.CheckBox11.Size = New System.Drawing.Size(108, 16)
+        Me.CheckBox11.TabIndex = 3
+        Me.CheckBox11.Text = """已审核""复选框"
+        Me.CheckBox11.UseVisualStyleBackColor = True
+        '
+        'CheckBox12
+        '
+        Me.CheckBox12.AutoSize = True
+        Me.CheckBox12.Location = New System.Drawing.Point(40, 250)
+        Me.CheckBox12.Name = "CheckBox12"
+        Me.CheckBox12.Size = New System.Drawing.Size(84, 16)
+        Me.CheckBox12.TabIndex = 6
+        Me.CheckBox12.Text = "CheckBox12"
+        Me.CheckBox12.UseVisualStyleBackColor = True
+        '
+        'CheckBox13
+        '
+        Me.CheckBox13.AutoSize = True
+        Me.CheckBox13.Location = New System.Drawing.Point(40, 214)
+        Me.CheckBox13.Name = "CheckBox13"
+        Me.CheckBox13.Size = New System.Drawing.Size(84, 16)
+        Me.CheckBox13.TabIndex = 5
+        Me.CheckBox13.Text = "CheckBox13"
+        Me.CheckBox13.UseVisualStyleBackColor = True
         '
         'Setting
         '
@@ -309,6 +501,10 @@ Partial Class Setting
         Me.TabPage2.ResumeLayout(False)
         Me.TabPage2.PerformLayout()
         CType(Me.TrackBar1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TabPage3.ResumeLayout(False)
+        Me.TabPage3.PerformLayout()
+        Me.TabPage4.ResumeLayout(False)
+        Me.TabPage4.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -336,5 +532,21 @@ Partial Class Setting
     Friend WithEvents TrackBar1 As System.Windows.Forms.TrackBar
     Friend WithEvents Label8 As System.Windows.Forms.Label
     Friend WithEvents TabPage3 As System.Windows.Forms.TabPage
+    Friend WithEvents TabPage4 As System.Windows.Forms.TabPage
+    Friend WithEvents CheckBox5 As System.Windows.Forms.CheckBox
+    Friend WithEvents CheckBox6 As System.Windows.Forms.CheckBox
+    Friend WithEvents CheckBox7 As System.Windows.Forms.CheckBox
+    Friend WithEvents CheckBox4 As System.Windows.Forms.CheckBox
+    Friend WithEvents CheckBox3 As System.Windows.Forms.CheckBox
+    Friend WithEvents CheckBox2 As System.Windows.Forms.CheckBox
+    Friend WithEvents CheckBox1 As System.Windows.Forms.CheckBox
+    Friend WithEvents Label9 As System.Windows.Forms.Label
+    Friend WithEvents Label10 As System.Windows.Forms.Label
+    Friend WithEvents CheckBox12 As System.Windows.Forms.CheckBox
+    Friend WithEvents CheckBox13 As System.Windows.Forms.CheckBox
+    Friend WithEvents CheckBox10 As System.Windows.Forms.CheckBox
+    Friend WithEvents CheckBox11 As System.Windows.Forms.CheckBox
+    Friend WithEvents CheckBox9 As System.Windows.Forms.CheckBox
+    Friend WithEvents CheckBox8 As System.Windows.Forms.CheckBox
 
 End Class
