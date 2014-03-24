@@ -57,4 +57,14 @@
 
     Public _
         connstr = "Server=localhost;Database=nntv_ps;User ID=sa;Password=12345;"
+
+    '配置文件
+    Public ConfigFile As String = ".\config.ini"
+    '数据库DB配置
+    Public DbServer As String = "localhost"
+    Public DbDataBase As String = "nntv_ps"
+    Public DbUser As String = "sa"
+    Public DbPawd As String = "nntv@2014"
+    Public Conn As String = "Server=" & DbServer & ";Database=" & DbDataBase & _
+    ";User ID=" & DbUser & ";Password=" & DbPawd & ";"
 End Module

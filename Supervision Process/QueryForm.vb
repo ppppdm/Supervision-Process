@@ -3,10 +3,15 @@
 Public Class QueryForm
     Private Sub QueryForm_load(ByVal sender As Object, ByVal e As EventArgs) _
         Handles Me.Load
+
+        '加载QueryForm时的初始化工作
+        '初始化DataGridView
         DataGridView1.ColumnCount = 4
         DataGridView1.Columns(0).HeaderText = "名称"
         DataGridView1.Columns(1).HeaderText = "时长"
         DataGridView1.Columns(2).HeaderText = "状态"
+
+
     End Sub
 
     Private Sub SendInToolStripMenuItem_Click _
