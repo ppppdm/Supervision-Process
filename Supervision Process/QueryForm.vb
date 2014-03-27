@@ -60,16 +60,19 @@ Public Class QueryForm
         Console.WriteLine(queryString)
 
         Dim command As New SqlCommand(queryString, connection)
+
+        'sqlDataAdapter
+        Dim adapter As SqlDataAdapter = New SqlDataAdapter(command)
+
+        Dim queryDataTable As DataTable = New DataTable()
+        adapter.Fill(queryDataTable)
+
         Dim reader As SqlDataReader = command.ExecuteReader()
-        Try
-            While reader.Read()
-                'Console.WriteLine(String.Format("{0}, {1}", reader(0), reader(1)))
-                DataGridView1.Rows.Add(reader(0), reader(1), reader(2))
-            End While
-        Finally
-            ' Always call Close when done reading.
-            reader.Close()
-        End Try
+
+        FillDataGridView(reader)
+
+        FillDataGridView_dt(queryDataTable)
+
         connection.Close()
     End Sub
 
@@ -81,6 +84,38 @@ Public Class QueryForm
             "SELECT tape_name, length, tape_status.status FROM tape inner join tape_status ON tape.tape_status = tape_status.code Where tape_name LIKE '%" + _
             queryText + "%';"
     End Function
+
+    Private Sub FillDataGridView(ByRef reader As SqlDataReader)
+
+        Try
+            While reader.Read()
+                'Console.WriteLine(String.Format("{0}, {1}", reader(0), reader(1)))
+                DataGridView1.Rows.Add(reader(0), reader(1), reader(2))
+            End While
+        Finally
+            ' Always call Close when done reading.
+            reader.Close()
+        End Try
+    End Sub
+
+    Private Sub FillDataGridView_dt(ByRef dt As DataTable)
+
+        '清空原来的查询结果
+        DataGridView1.Rows.Clear()
+
+        Console.WriteLine(dt.Rows.Count)
+        Dim row As DataRow
+        For i = 0 To dt.Rows.Count - 1
+            Console.WriteLine(dt.Rows(i).Item("tape_name"))
+            Console.WriteLine(dt.Rows(i).ItemArray.Length)
+            row = dt.Rows(i)
+            DataGridView1.Rows.Add(row("tape_name"), row("length"), row("status"))
+        Next
+
+        For j = 0 To dt.Columns.Count - 1
+            Console.WriteLine(dt.Columns(j).ColumnName)
+        Next
+    End Sub
 
     Private Sub DataGridView1_CellMouseDown _
         (ByVal sender As Object, ByVal e As DataGridViewCellMouseEventArgs) _
