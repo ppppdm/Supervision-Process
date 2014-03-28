@@ -55,8 +55,7 @@
         cutjpg = _
             "D:\MyBackup\我的文档\Visual Studio 2008\Projects\上载管理\WindowsApplication1\bin\Debug\cutvideo.jpg"
 
-    Public _
-        connstr = "Server=localhost;Database=nntv_ps;User ID=sa;Password=12345;"
+    'Public connstr = "Server=localhost;Database=nntv_ps;User ID=sa;Password=12345;"
 
     '配置文件
     Public ConfigFile As String = ".\config.ini"
@@ -65,8 +64,10 @@
     Public DbDataBase As String = "nntv_ps"
     Public DbUser As String = "sa"
     Public DbPawd As String = "nntv@2014"
-    Public Conn As String = "Server=" & DbServer & ";Database=" & DbDataBase & _
-    ";User ID=" & DbUser & ";Password=" & DbPawd & ";"
+
+    Public _
+        ConnStr As String = "Server=" & DbServer & ";Database=" & DbDataBase & _
+                            ";User ID=" & DbUser & ";Password=" & DbPawd & ";"
 
     '高级查询选项启用 Ao = advanced options
     Public AoNotUpdate As Boolean = True
@@ -75,15 +76,32 @@
     Public AoDateAndTime As Boolean = True
 
     '查询内容显示设置 Swo = show options
-    Public SwoTapeName = True ' not modify
-    Public SwoTapeStatus = True ' not modify
+    'Public SwoTapeName = True ' not modify
+    'Public SwoTapeStatus = True ' not modify
 
-    Public SwoTapeLength = True
-    Public SwoTapeSendInTime = True
-    Public SwoTapeSendInSendPer = False
-    Public SwoTapeSendInRecvPer = False
-    Public SwoTapeSendOutTime = True
-    Public SwoTapeSendOutSendPer = False
-    Public SwoTapeSendOutRecvPer = False
+    'Public SwoTapeLength = True
+    'Public SwoTapeSendInTime = True
+    'Public SwoTapeSendInSendPer = False
+    'Public SwoTapeSendInRecvPer = False
+    'Public SwoTapeSendOutTime = True
+    'Public SwoTapeSendOutSendPer = False
+    'Public SwoTapeSendOutRecvPer = False
 
+    '{"","","",bool} = {该变量名称, 数据库中的列名, 显示在dataGridView中的名字,用户配置是否显示该列}
+    Public Const SwoName = 0
+    Public Const SwoDbColumnName = 1
+    Public Const SwoDataViewName = 2
+    Public Const SwoValue = 3
+    Public SwoTrueOptionsCount = 0 ' need be init or change if user change swo
+
+    Public Swo As Object(,) = _
+            {{"SwoTapeName", "tape_name", "名称", True}, _
+             {"SwoTapeStatus", "tape_status", "状态", False}, _
+             {"SwoTapeLength", "length", "时长", True}, _
+             {"SwoTapeSendInTime", "in_bc_time", "送带时间", True}, _
+             {"SwoTapeSendInSendPer", "in_bc_send_per", "送带人", False}, _
+             {"SwoTapeSendInRecvPer", "in_bc_recv_per", "接带人", False}, _
+             {"SwoTapeSendOutTime", "out_bc_time", "取代时间", False}, _
+             {"SwoTapeSendOutSendPer", "out_bc_send_per", "发带人", False}, _
+             {"SwoTapeSendOutRecvPer", "out_bc_recv_per", "取带人", False}}
 End Module
