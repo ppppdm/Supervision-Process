@@ -16,7 +16,6 @@ Public Class QueryForm
                 j += 1
             End If
         Next
-
     End Sub
 
     Private Sub SendInToolStripMenuItem_Click _
@@ -50,7 +49,7 @@ Public Class QueryForm
         Handles ButtonQuery.Click
 
         Dim queryDataTable As DataTable = New DataTable()
-        Dim connStr As String = "Server=" & DbServer & ";Database=" & DbDataBase & _
+        Dim connStr As String = "Server=" & DbServer & ";Database=" & DbDbNamme & _
                                 ";User ID=" & DbUser & ";Password=" & DbPawd & _
                                 ";"
         Dim connection As New SqlConnection(connStr)
@@ -79,15 +78,14 @@ Public Class QueryForm
         Catch ex As SqlException
             MsgBox(ex.Message, MsgBoxStyle.OkOnly, "DB Error")
         End Try
-
     End Sub
 
     Private Function GetQueryString() As String
-        Dim queryText As String = TextBox1.Text
+        Dim queryText As String = TextBoxQuery.Text
         Dim selectList As List(Of String) = New List(Of String)()
         Dim selectStr As String = ""
-        Dim queryStr = ""
-        
+        Dim queryStr As String
+
         Console.WriteLine(Swo)
         For i = 0 To Swo.GetLength(0) - 1
             If Swo(i, SwoValue) = True Then
@@ -109,9 +107,8 @@ Public Class QueryForm
         Console.WriteLine(selectStr)
 
         queryStr = "SELECT " + selectStr + " FROM tape " + _
-            "INNER JOIN tape_status ON tape.tape_status = tape_status.code " + _
-            "WHERE tape_name LIKE '%" + _
-            queryText + "%';"
+                   "INNER JOIN tape_status ON tape.tape_status = tape_status.code " + _
+                   "WHERE tape_name LIKE '%" + queryText + "%';"
         Console.WriteLine(queryStr)
         Return queryStr
 
@@ -183,14 +180,19 @@ Public Class QueryForm
             reader.SetDelimiters(",")
 
             Dim currentRow As String()
-            '初始化DSN
+
             Try
+                '初始化DSN
                 currentRow = reader.ReadFields()
 
                 DbServer = currentRow(0)
-                DbDataBase = currentRow(1)
+                DbDbNamme = currentRow(1)
                 DbUser = currentRow(2)
                 DbPawd = currentRow(3)
+
+                '初始化db connstr
+                ConnStr = "Server=" & DbServer & ";Database=" & DbDbNamme & _
+                          ";User ID=" & DbUser & ";Password=" & DbPawd & ";"
 
             Catch ex As Microsoft.VisualBasic.FileIO.MalformedLineException
                 Console.WriteLine _
@@ -215,5 +217,4 @@ Public Class QueryForm
             End If
         Next
     End Sub
-
 End Class

@@ -9,7 +9,7 @@ Partial Class QueryForm
         '配置变量写入配置文件config.ini
         Try
             My.Computer.FileSystem.WriteAllText(ConfigFile, DbServer, False)
-            My.Computer.FileSystem.WriteAllText(ConfigFile, "," & DbDataBase, True)
+            My.Computer.FileSystem.WriteAllText(ConfigFile, "," & DbDbNamme, True)
             My.Computer.FileSystem.WriteAllText(ConfigFile, "," & DbUser, True)
             My.Computer.FileSystem.WriteAllText(ConfigFile, "," & DbPawd, True)
         Catch err As Exception
@@ -42,7 +42,7 @@ Partial Class QueryForm
         Me.OptionsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
         Me.AddPeopleToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem
         Me.ButtonQuery = New System.Windows.Forms.Button
-        Me.TextBox1 = New System.Windows.Forms.TextBox
+        Me.TextBoxQuery = New System.Windows.Forms.TextBox
         Me.Label1 = New System.Windows.Forms.Label
         Me.GroupBox1 = New System.Windows.Forms.GroupBox
         Me.CheckBox2 = New System.Windows.Forms.CheckBox
@@ -93,13 +93,13 @@ Partial Class QueryForm
         'OptionsToolStripMenuItem
         '
         Me.OptionsToolStripMenuItem.Name = "OptionsToolStripMenuItem"
-        Me.OptionsToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.OptionsToolStripMenuItem.Size = New System.Drawing.Size(124, 22)
         Me.OptionsToolStripMenuItem.Text = "选项..."
         '
         'AddPeopleToolStripMenuItem1
         '
         Me.AddPeopleToolStripMenuItem1.Name = "AddPeopleToolStripMenuItem1"
-        Me.AddPeopleToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
+        Me.AddPeopleToolStripMenuItem1.Size = New System.Drawing.Size(124, 22)
         Me.AddPeopleToolStripMenuItem1.Text = "人员添加"
         '
         'ButtonQuery
@@ -111,12 +111,12 @@ Partial Class QueryForm
         Me.ButtonQuery.Text = "查询"
         Me.ButtonQuery.UseVisualStyleBackColor = True
         '
-        'TextBox1
+        'TextBoxQuery
         '
-        Me.TextBox1.Location = New System.Drawing.Point(58, 30)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(100, 21)
-        Me.TextBox1.TabIndex = 2
+        Me.TextBoxQuery.Location = New System.Drawing.Point(58, 30)
+        Me.TextBoxQuery.Name = "TextBoxQuery"
+        Me.TextBoxQuery.Size = New System.Drawing.Size(100, 21)
+        Me.TextBoxQuery.TabIndex = 2
         '
         'Label1
         '
@@ -163,7 +163,7 @@ Partial Class QueryForm
         Me.PanelQuery.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
                     Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.PanelQuery.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.PanelQuery.Controls.Add(Me.TextBox1)
+        Me.PanelQuery.Controls.Add(Me.TextBoxQuery)
         Me.PanelQuery.Controls.Add(Me.GroupBox1)
         Me.PanelQuery.Controls.Add(Me.Label1)
         Me.PanelQuery.Controls.Add(Me.ButtonQuery)
@@ -207,24 +207,24 @@ Partial Class QueryForm
         '
         Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.UploadToolStripMenuItem, Me.CheckUpToolStripMenuItem, Me.BackCheckToolStripMenuItem})
         Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
-        Me.ContextMenuStrip1.Size = New System.Drawing.Size(153, 92)
+        Me.ContextMenuStrip1.Size = New System.Drawing.Size(125, 70)
         '
         'UploadToolStripMenuItem
         '
         Me.UploadToolStripMenuItem.Name = "UploadToolStripMenuItem"
-        Me.UploadToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.UploadToolStripMenuItem.Size = New System.Drawing.Size(124, 22)
         Me.UploadToolStripMenuItem.Text = "采集"
         '
         'CheckUpToolStripMenuItem
         '
         Me.CheckUpToolStripMenuItem.Name = "CheckUpToolStripMenuItem"
-        Me.CheckUpToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.CheckUpToolStripMenuItem.Size = New System.Drawing.Size(124, 22)
         Me.CheckUpToolStripMenuItem.Text = "审核"
         '
         'BackCheckToolStripMenuItem
         '
         Me.BackCheckToolStripMenuItem.Name = "BackCheckToolStripMenuItem"
-        Me.BackCheckToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.BackCheckToolStripMenuItem.Size = New System.Drawing.Size(124, 22)
         Me.BackCheckToolStripMenuItem.Text = "回迁审核"
         '
         'QueryForm
@@ -249,13 +249,14 @@ Partial Class QueryForm
         Me.ContextMenuStrip1.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
+
     End Sub
     Friend WithEvents MenuStrip1 As System.Windows.Forms.MenuStrip
     Friend WithEvents SendInToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents SendOutToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents SettingToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ButtonQuery As System.Windows.Forms.Button
-    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
+    Friend WithEvents TextBoxQuery As System.Windows.Forms.TextBox
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
     Friend WithEvents CheckBox2 As System.Windows.Forms.CheckBox
